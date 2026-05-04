@@ -1,0 +1,13 @@
+country,epsilon,CRJ,High_Risk,Risk_Group
+USA,0.2,69.6,True,High Risk (CRJ > 12.0)
+RUS,0.27,25.7,True,High Risk (CRJ > 12.0)
+IDN,0.28,23.8,True,High Risk (CRJ > 12.0)
+ITA,0.28,22.4,True,High Risk (CRJ > 12.0)
+DEU,0.3,17.2,True,High Risk (CRJ > 12.0)
+VNM,0.27,12.8,True,High Risk (CRJ > 12.0)
+NER,0.27,12.8,True,High Risk (CRJ > 12.0)
+JPN,0.26,12.5,True,High Risk (CRJ > 12.0)
+GBR,0.24,12.4,True,High Risk (CRJ > 12.0)
+PAK,0.26,12.4,True,High Risk (CRJ > 12.0)
+BGD,0.26,12.4,True,High Risk (CRJ > 12.0)
+CZE,0.3,12.1,True,High Risk (CRJ > 12.0)
