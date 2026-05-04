@@ -1,5 +1,4 @@
 
-```
 # Appendix D　Results Reproduction: Code and Algorithms (Chapters 7 and 8)
 
 To ensure full independent reproducibility of the computational methods in Chapter 7 and the empirical results in Chapter 8, this appendix provides complete reproduction guidelines.
@@ -23,7 +22,6 @@ def constraint_variational_integration(G, rho=0.6, cutoff_ratio=0.3):
     """Constrained variational optimization for economic integration degree."""
     # Full implementation available in the repository
     pass
-```
 
 ## D.3 Chapter 8 Six Core Figures
 - code/fig8_1.py → Figure 8.1: CRJ Distribution and 12.0 Threshold Validation
