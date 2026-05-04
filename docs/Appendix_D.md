@@ -16,7 +16,6 @@ Restricted raw data (WIOD .xlsb, full WID .csv, Edelman PDFs, OECD TiVA raw file
 ## D.2 Chapter 7 Core Algorithm
 File: code/algorithm_constraint_variation.py
 
-```python
 # See full code in repository
 def constraint_variational_integration(G, rho=0.6, cutoff_ratio=0.3):
     """Constrained variational optimization for economic integration degree."""
@@ -43,9 +42,3 @@ Figures are saved to output/ at 300 dpi.
 License: MIT License  
 Data usage: Strictly follows Appendix E.
 
-```
-
-
-4. 再次创建文件，文件名输入 `Appendix_E.md`，粘贴上面的 **File 2** 全部内容 → Commit new file。
-
-完成后回复我 “docs已创建”，我立即帮您做最终检查和论文引用文字。
