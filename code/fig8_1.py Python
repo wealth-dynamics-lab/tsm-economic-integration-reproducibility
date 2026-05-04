@@ -1,0 +1,40 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import warnings
+warnings.filterwarnings('ignore')
+
+plt.style.use('seaborn-v0_8-whitegrid')
+sns.set_palette("Set2")
+
+print("=== Generating Figure 8.1: CRJ Distribution and 12.0 Threshold Validation ===\n")
+
+# Load data
+df = pd.read_csv('data/图1数据.csv')
+df['CRJ'] = pd.to_numeric(df['CRJ'], errors='coerce')
+
+# Plot
+fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+fig.suptitle('Figure 8.1: CRJ Distribution and 12.0 Threshold Validation\nEconomic Integration Degree Framework', fontsize=14, fontweight='bold')
+
+# (a) Histogram
+sns.histplot(df['CRJ'], kde=True, ax=axes[0], color='#e74c3c')
+axes[0].axvline(x=12.0, color='red', linestyle='--', linewidth=2, label='CRJ = 12.0 Threshold')
+axes[0].set_xlabel('CRJ Value')
+axes[0].set_ylabel('Frequency')
+axes[0].set_title('(a) CRJ Distribution (39 Countries)')
+axes[0].legend()
+
+# (b) High-risk countries
+high_risk = (df['CRJ'] > 12.0).sum()
+total = len(df)
+ratio = high_risk / total * 100
+sns.barplot(x=['High Risk (>12.0)', 'Low Risk (≤12.0)'], y=[high_risk, total - high_risk], ax=axes[1], palette=['#e74c3c', '#3498db'])
+axes[1].set_ylabel('Number of Countries')
+axes[1].set_title('(b) High-Risk Countries Ratio')
+axes[1].text(0, high_risk/2, f'{high_risk} countries\n({ratio:.1f}%)', ha='center', va='center', fontsize=12, color='white', fontweight='bold')
+
+plt.tight_layout()
+plt.savefig('output/Figure_8.1_CRJ_Threshold_Validation.png', dpi=300, bbox_inches='tight')
+plt.close()
+print("✅ Figure 8.1 saved successfully!")
