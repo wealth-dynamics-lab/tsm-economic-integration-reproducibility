@@ -1,4 +1,3 @@
-
 # Appendix D　Results Reproduction: Code and Algorithms (Chapters 7 and 8)
 
 To ensure full independent reproducibility of the computational methods in Chapter 7 and the empirical results in Chapter 8, this appendix provides complete reproduction guidelines.
